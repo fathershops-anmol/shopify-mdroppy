@@ -1,0 +1,36 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "697807d7f35d1d0d9a6965c23d072f43"
+application_url = "https://tunnel.pardeep.app"
+embedded = true
+name = "mDroppy"
+handle = "mDroppy"
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = false
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,write_products,read_orders,write_orders,read_locations,write_locations,read_fulfillments,write_fulfillments,read_assigned_fulfillment_orders,write_assigned_fulfillment_orders"
+
+[auth]
+redirect_urls = [
+  "https://tunnel.pardeep.app/auth/callback",
+  "https://tunnel.pardeep.app/auth/shopify/callback",
+  "https://tunnel.pardeep.app/api/auth/callback"
+]
+
+[pos]
+embedded = false
