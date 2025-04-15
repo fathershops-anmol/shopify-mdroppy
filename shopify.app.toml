@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "697807d7f35d1d0d9a6965c23d072f43"
-application_url = "https://tunnel.pardeep.app"
+application_url = "https://mc-yrhqbrq6fu.bunny.run"
 embedded = true
 name = "mDroppy"
 handle = "mDroppy"
@@ -27,9 +27,9 @@ scopes = "read_products,write_products,read_orders,write_orders,read_locations,w
 
 [auth]
 redirect_urls = [
-  "https://tunnel.pardeep.app/auth/callback",
-  "https://tunnel.pardeep.app/auth/shopify/callback",
-  "https://tunnel.pardeep.app/api/auth/callback"
+  "https://mc-yrhqbrq6fu.bunny.run/auth/callback",
+  "https://mc-yrhqbrq6fu.bunny.run/auth/shopify/callback",
+  "https://mc-yrhqbrq6fu.bunny.run/api/auth/callback"
 ]
 
 [pos]
